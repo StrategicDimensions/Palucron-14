@@ -2,9 +2,9 @@
 # License LGPL-3 -
 
 from odoo import api, fields, models
+import numpy
 
-
-class CRM(models.Model):
+class CRMLead(models.Model):
     _inherit = 'crm.lead'
 
     def some_function(self, rate, insta_num,terms,principle):
