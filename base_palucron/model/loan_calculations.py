@@ -15,4 +15,12 @@ class CRMLead(models.Model):
     
     def calc_function_pmt(self, rate, insta_num,terms,principal):
         return (0 - numpy.pmt(rate/12,terms,principal))
+
+    def fees_function_ipmt(self, rate, insta_num,terms,fees_principal):
+        return (0 - numpy.ipmt(rate/12,insta_num,terms,principal))
     
+    def fees_function_ppmt(self, rate, insta_num,terms,fees_principal):
+        return (0 - numpy.ppmt(rate/12,insta_num,terms,principal))
+    
+    def fess_function_pmt(self, rate, insta_num,terms,fees_principal):
+        return (0 - numpy.pmt(rate/12,terms,principal))
